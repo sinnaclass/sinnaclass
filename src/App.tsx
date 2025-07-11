@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-function App() {
+f
+
+const Info=() => {
   //useState => Hooks
   // USTstAT는 가장기본이면 HOOK 이며, 함수컴포넌트에서도 가변적인 상태를 지닐수 있게 해준다
   // 이 함수가 호출되면 배열을 반환한다. => 첫번째 요소는 상태 값, 두번째 요소는 상태는 설정하는 함수
@@ -9,6 +11,9 @@ function App() {
   const [value, setValue] = useState(0); // => 이 함수가 호출되면 배열을 반환한다.  
   const [name, setName] = useState(0); // => 이 함수가 호출되면 배열을 반환한다.
   const [nickname, setNickname]
+
+
+  }
 //   //useState함수의 파라미터에는 상태의 기본값을 넣어줍니다
 
 // //   return (
