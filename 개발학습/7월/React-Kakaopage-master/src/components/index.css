@@ -1,0 +1,69 @@
+import { Plus } from "lucide-react";
+
+import "/App.css";
+
+function App() {(
+    return(
+        
+    )
+)
+
+}
+  return (
+    <div className="h-screen flex flex-col bg-black text-white">
+      {/* 상단 영역: 전체 화면을 flex로 분할 */}
+      <div className="flex flex-1 overflow-hidden">
+        {/* 사이드바 */}
+        <aside className="w-64 bg-[#121212] p-4">
+          {/* 사이드바 내용 */}
+          <div className="my-lib flex justify-between items-center">
+            <div className="my-lib__text">내 라이브러리</div>
+            <div className="my-lib__add">
+              <Plus />
+            </div>
+          </div>
+          <div className="recomm-wrap flex flex-col">
+            <div className="recomm-wrap__heading">
+              첫 번째 플레이 리스트를 만드세요
+            </div>
+            <div className="recomm-wrap__desc">
+              어렵지 않아요. 저희가 도와드릴게요.
+            </div>
+            <button className="rounded-3xl h-12 bg-white text-black recomm-wrap__btn">
+              플레이리스트 만들기
+            </button>
+          </div>
+          <div className="recomm-wrap flex flex-col">
+            <div className="recomm-wrap__heading">
+              팔로우할 팟캐스트를 찾아보세요
+            </div>
+            <div className="recomm-wrap__desc">
+              새로운 에피소드에 대한 소식을 알려드릴게요.
+            </div>
+            <button className="rounded-3xl h-12 bg-white text-black recomm-wrap__btn">
+              팟캐스트 둘러보기
+            </button>
+          </div>
+        </aside>
+
+        {/* 메인 콘텐츠 */}
+        <main className="flex-1 bg-[#1e1e1e] p-4 overflow-y-auto">
+          {/* 상단바 (검색, 유저 등) */}
+          <header className="h-16 flex items-center justify-between">
+            {/* 검색창, 유저 프로필 등 */}
+          </header>
+
+          {/* 메인 콘텐츠: 추천 목록, 앨범 등 */}
+          <section>{/* 예: 최근 재생한 항목, 좋아요한 곡 등 */}</section>
+        </main>
+      </div>
+
+      {/* 하단 고정 플레이어 */}
+      <footer className="h-24 bg-[#181818] border-t border-[#282828] flex items-center px-4">
+        {/* 재생 버튼, 음량 조절 등 */}
+      </footer>
+    </div>
+  );
+}
+
+export default App;
