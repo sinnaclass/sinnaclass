@@ -5,40 +5,40 @@ import "@blocknote/mantine/style.css";
 
 // Uploads a file to tmpfiles.org and returns the URL to the uploaded file.
 async function uploadFile(file: File) {
-    const body = new FormData();
-    body.append("file", file);
+  const body = new FormData();
+  body.append("file", file);
 
-    const ret = await fetch("https://tmpfiles.org/api/v1/upload", {
-        method: "POST",
-        body: body,
-    });
-    return (await ret.json()).data.url.replace("tmpfiles.org/", "tmpfiles.org/dl/");
+  const ret = await fetch("https://tmpfiles.org/api/v1/upload", {
+    method: "POST",
+    body: body,
+  });
+  return (await ret.json()).data.url.replace("tmpfiles.org/", "tmpfiles.org/dl/");
 }
 
 function TextEditor() {
-    // Creates a new editor instance.
-    const editor = useCreateBlockNote({
-        initialContent: [
-            {
-                type: "paragraph",
-                content: "Welcome to this demo!",
-            },
-            {
-                type: "paragraph",
-                content: "Upload an image using the button below",
-            },
-            {
-                type: "image",
-            },
-            {
-                type: "paragraph",
-            },
-        ],
-        uploadFile,
-    });
+  // Creates a new editor instance.
+  const editor = useCreateBlockNote({
+    initialContent: [
+      {
+        type: "paragraph",
+        content: "Welcome to this demo!",
+      },
+      {
+        type: "paragraph",
+        content: "Upload an image using the button below",
+      },
+      {
+        type: "image",
+      },
+      {
+        type: "paragraph",
+      },
+    ],
+    uploadFile,
+  });
 
-    // Renders the editor instance using a React component.
-    return <BlockNoteView editor={editor} />;
+  // Renders the editor instance using a React component.
+  return <BlockNoteView editor={editor} />;
 }
 
 export { TextEditor };
